@@ -15,8 +15,20 @@ class CodigosController extends Controller
      */
     public function index($codigo)
     {
-        //dd(777);
-        return Codigos::where('d_codigo',$codigo)->get();
+        
+        $codigos_result = Codigos::where('d_codigo',$codigo)->get()->toArray();
+
+        $array_data = array("zip_code" => $codigo, "locality" => $codigos_result[0]['d_ciudad'], "federal_entity" 
+            => $codigos_result[0]);
+            
+        foreach ($codigos_result as $key => $value) {
+            
+            //$array_data =       $codigos_result[$key];
+            //print_r($codigos_result[$key]);
+        }
+
+        //dd($codigos_result);  
+        return $array_data;
     }
 
     /**

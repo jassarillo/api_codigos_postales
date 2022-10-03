@@ -30,9 +30,6 @@ Generate a new application key
 
     php artisan key:generate
 
-Generate a new JWT authentication secret key
-
-    php artisan jwt:generate
     
 In the database/ folder you can find next file for your database: codigos_postales.sql
 
@@ -41,6 +38,13 @@ Start the local development server
     php artisan serve
 
 You can now access the server at http://localhost:8000
+
+
+***Important:
+
+You can see the next code on serve. Please click here or cut and paste this url
+
+https://jobs.devaap.com/api/get_datos/01210
 
 
 
